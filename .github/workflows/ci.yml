@@ -82,4 +82,3 @@ jobs:
           files: artifact/**/HiAuRo.Helper.dll
           generate_release_notes: true
           tag_name: ${{ env.RELEASE_TAG || '' }}
-          prerelease: ${{ github.ref == 'refs/heads/main' }}
