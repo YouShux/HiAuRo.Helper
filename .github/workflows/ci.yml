@@ -72,8 +72,8 @@ jobs:
       - name: Pack NuGet
         shell: pwsh
         run: |
-          dotnet tool install --global NuGetKeyVaultSignTool 2>$null
-          nuget pack HiAuRo.Sdk.nuspec -OutputDirectory nuget -BasePath .
+          Invoke-WebRequest https://dist.nuget.org/win-x86-commandline/latest/nuget.exe -OutFile nuget.exe
+          .\nuget.exe pack HiAuRo.Sdk.nuspec -OutputDirectory nuget -BasePath .
 
       - name: Upload NuGet artifact
         uses: actions/upload-artifact@v4
