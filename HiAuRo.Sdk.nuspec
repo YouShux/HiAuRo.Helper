@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>HiAuRo.Sdk</id>
+    <version>0.1.0</version>
+    <authors>嗨呀</authors>
+    <description>HiAuRo ACR 开发 SDK — 含 HiAuRo 框架接口、职业 Helper、OmenTools、Dalamud 运行时，一键引用即可开发 ACR</description>
+    <tags>FFXIV Dalamud ACR HiAuRo</tags>
+    <repository type="git" url="https://github.com/denghaoxuan991876906/HiAuRo.Helper" />
+    <dependencies>
+      <group targetFramework="net10.0-windows" />
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- HiAuRo 框架 -->
+    <file src="build/HiAuRo.dll" target="lib/net10.0-windows/HiAuRo.dll" />
+    <file src="build/HiAuRo.deps.json" target="lib/net10.0-windows/HiAuRo.deps.json" />
+
+    <!-- HiAuRo.Helper 职业库 -->
+    <file src="build/HiAuRo.Helper.dll" target="lib/net10.0-windows/HiAuRo.Helper.dll" />
+
+    <!-- OmenTools -->
+    <file src="build/OmenTools.dll" target="lib/net10.0-windows/OmenTools.dll" />
+
+    <!-- Dalamud 运行时 -->
+    <file src="build/Dalamud.dll" target="lib/net10.0-windows/Dalamud.dll" />
+    <file src="build/Dalamud.Common.dll" target="lib/net10.0-windows/Dalamud.Common.dll" />
+    <file src="build/Dalamud.Bindings.ImGui.dll" target="lib/net10.0-windows/Dalamud.Bindings.ImGui.dll" />
+    <file src="build/FFXIVClientStructs.dll" target="lib/net10.0-windows/FFXIVClientStructs.dll" />
+    <file src="build/Lumina.dll" target="lib/net10.0-windows/Lumina.dll" />
+    <file src="build/Lumina.Excel.dll" target="lib/net10.0-windows/Lumina.Excel.dll" />
+    <file src="build/ImGui.NET.dll" target="lib/net10.0-windows/ImGui.NET.dll" />
+    <file src="build/ImGuiScene.dll" target="lib/net10.0-windows/ImGuiScene.dll" />
+    <file src="build/TerraFX.Interop.Windows.dll" target="lib/net10.0-windows/TerraFX.Interop.Windows.dll" />
+    <file src="build/Newtonsoft.Json.dll" target="lib/net10.0-windows/Newtonsoft.Json.dll" />
+    <file src="build/Serilog.dll" target="lib/net10.0-windows/Serilog.dll" />
+    <file src="build/CheapLoc.dll" target="lib/net10.0-windows/CheapLoc.dll" />
+  </files>
+</package>
