@@ -2,7 +2,6 @@ name: Build & Release
 
 on:
   push:
-    branches: [main]
     tags: ['v*']
   workflow_dispatch:
 
@@ -14,8 +13,9 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
-        with:
-          submodules: recursive
+
+      - name: Clone OmenTools (outside source tree)
+        run: git clone https://github.com/AtmoOmen/OmenTools.git ../OmenTools --depth 1
 
       - uses: actions/setup-dotnet@v4
         with:
@@ -24,16 +24,11 @@ jobs:
       - name: Download Dalamud
         shell: pwsh
         run: |
-          $dalamudDir = "${{ runner.temp }}\dalamud"
-          Invoke-WebRequest https://goatcorp.github.io/dalamud-distrib/latest.zip -OutFile "$dalamudDir.zip"
-          Expand-Archive "$dalamudDir.zip" -DestinationPath $dalamudDir
+          $dir = "${{ runner.temp }}\dalamud"
+          Invoke-WebRequest https://goatcorp.github.io/dalamud-distrib/latest.zip -OutFile "$dir.zip"
+          Expand-Archive "$dir.zip" -DestinationPath $dir
 
-      - name: Build OmenTools
-        run: dotnet build OmenTools\OmenTools.csproj -c Release
-        env:
-          DALAMUD_HOME: ${{ runner.temp }}\dalamud
-
-      - name: Build Helper
+      - name: Build
         run: dotnet build HiAuRo.Helper.csproj -c Release
         env:
           DALAMUD_HOME: ${{ runner.temp }}\dalamud
@@ -48,6 +43,8 @@ jobs:
     if: startsWith(github.ref, 'refs/tags/v')
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - uses: actions/download-artifact@v4
         with:

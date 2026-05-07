@@ -8,29 +8,14 @@
     <UseWindowsForms>true</UseWindowsForms>
     <RestorePackagesWithLockFile>true</RestorePackagesWithLockFile>
     <DisableDalamudPackager>true</DisableDalamudPackager>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
     <RootNamespace>HiAuRo.Helper</RootNamespace>
     <AssemblyName>HiAuRo.Helper</AssemblyName>
   </PropertyGroup>
 
-  <PropertyGroup>
-    <OmenToolsDll>OmenTools\bin\$(Configuration)\OmenTools.dll</OmenToolsDll>
-  </PropertyGroup>
-
   <ItemGroup>
-    <Reference Include="OmenTools">
-      <HintPath>$(OmenToolsDll)</HintPath>
+    <ProjectReference Include="..\OmenTools\OmenTools.csproj">
       <Private>False</Private>
-    </Reference>
-    <Reference Include="GuerrillaNtp">
-      <HintPath>OmenTools\bin\$(Configuration)\GuerrillaNtp.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="TinyPinyin">
-      <HintPath>OmenTools\bin\$(Configuration)\TinyPinyin.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
+    </ProjectReference>
   </ItemGroup>
 
 </Project>
