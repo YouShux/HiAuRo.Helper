@@ -6,12 +6,6 @@ namespace HiAuRo.Helper;
 /// </summary>
 public class RDMHelper
 {
-    private readonly IHelperContext _ctx;
-
-    public RDMHelper(IHelperContext ctx)
-    {
-        _ctx = ctx;
-    }
 
     #region 技能 / Buff ID
 
@@ -25,32 +19,32 @@ public class RDMHelper
     #endregion
 
     /// <summary>赤魔法师职业量谱</summary>
-    public RDMGauge? Gauge => DService.Instance().JobGauges.Get<RDMGauge>();
+    public static RDMGauge? Gauge => DService.Instance().JobGauges.Get<RDMGauge>();
 
     /// <summary>白魔元 (0-100)</summary>
-    public byte WhiteMana => Gauge?.WhiteMana ?? 0;
+    public static byte WhiteMana => Gauge?.WhiteMana ?? 0;
 
     /// <summary>黑魔元 (0-100)</summary>
-    public byte BlackMana => Gauge?.BlackMana ?? 0;
+    public static byte BlackMana => Gauge?.BlackMana ?? 0;
 
     /// <summary>魔元集层数</summary>
-    public byte ManaStacks => Gauge?.ManaStacks ?? 0;
+    public static byte ManaStacks => Gauge?.ManaStacks ?? 0;
 
     /// <summary>是否可以发动近战连击 (黑白魔元均 >= 50)</summary>
-    public bool CanMeleeCombo => WhiteMana >= 50 && BlackMana >= 50;
+    public static bool CanMeleeCombo => WhiteMana >= 50 && BlackMana >= 50;
 
     /// <summary>鼓励是否激活</summary>
-    public bool HasEmbolden => _ctx.HasStatus(Embolden);
+    public static bool HasEmbolden => HelperRuntime.HasStatus(Embolden);
 
     /// <summary>倍增是否激活</summary>
-    public bool HasManafication => _ctx.HasStatus(Manafication);
+    public static bool HasManafication => HelperRuntime.HasStatus(Manafication);
 
     /// <summary>促进是否激活</summary>
-    public bool HasAcceleration => _ctx.HasStatus(Acceleration);
+    public static bool HasAcceleration => HelperRuntime.HasStatus(Acceleration);
 
     /// <summary>赤飞石预备是否激活</summary>
-    public bool HasVerstoneReady => _ctx.HasStatus(VerstoneReady);
+    public static bool HasVerstoneReady => HelperRuntime.HasStatus(VerstoneReady);
 
     /// <summary>赤火炎预备是否激活</summary>
-    public bool HasVerfireReady => _ctx.HasStatus(VerfireReady);
+    public static bool HasVerfireReady => HelperRuntime.HasStatus(VerfireReady);
 }

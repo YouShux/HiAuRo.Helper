@@ -6,12 +6,6 @@ namespace HiAuRo.Helper;
 /// </summary>
 public class BLMHelper
 {
-    private readonly IHelperContext _ctx;
-
-    public BLMHelper(IHelperContext ctx)
-    {
-        _ctx = ctx;
-    }
 
     #region 技能 / Buff ID
 
@@ -27,32 +21,32 @@ public class BLMHelper
     #endregion
 
     /// <summary>黑魔法师职业量谱</summary>
-    public BLMGauge? Gauge => DService.Instance().JobGauges.Get<BLMGauge>();
+    public static BLMGauge? Gauge => DService.Instance().JobGauges.Get<BLMGauge>();
 
     /// <summary>是否处于星极火状态</summary>
-    public bool InAstralFire => Gauge?.InAstralFire ?? false;
+    public static bool InAstralFire => Gauge?.InAstralFire ?? false;
 
     /// <summary>是否处于冰澈状态</summary>
-    public bool InUmbralIce => Gauge?.InUmbralIce ?? false;
+    public static bool InUmbralIce => Gauge?.InUmbralIce ?? false;
 
     /// <summary>冰脉层数</summary>
-    public byte UmbralHearts => Gauge?.UmbralHearts ?? 0;
+    public static byte UmbralHearts => Gauge?.UmbralHearts ?? 0;
 
     /// <summary>悖论充能层数</summary>
-    public byte PolyglotStacks => Gauge?.PolyglotStacks ?? 0;
+    public static byte PolyglotStacks => Gauge?.PolyglotStacks ?? 0;
 
     /// <summary>是否有悖论充能</summary>
-    public bool HasPolyglot => PolyglotStacks > 0;
+    public static bool HasPolyglot => PolyglotStacks > 0;
 
     /// <summary>天语是否激活</summary>
-    public bool HasEnochian => _ctx.HasStatus(Enochian);
+    public static bool HasEnochian => HelperRuntime.HasStatus(Enochian);
 
     /// <summary>黑魔纹是否激活</summary>
-    public bool HasLeyLines => _ctx.HasStatus(LeyLines);
+    public static bool HasLeyLines => HelperRuntime.HasStatus(LeyLines);
 
     /// <summary>三连咏唱是否激活</summary>
-    public bool HasTriplecast => _ctx.HasStatus(Triplecast);
+    public static bool HasTriplecast => HelperRuntime.HasStatus(Triplecast);
 
     /// <summary>激情咏唱是否激活</summary>
-    public bool HasSharpcast => _ctx.HasStatus(Sharpcast);
+    public static bool HasSharpcast => HelperRuntime.HasStatus(Sharpcast);
 }

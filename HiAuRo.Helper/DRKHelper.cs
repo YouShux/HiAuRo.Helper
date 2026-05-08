@@ -6,12 +6,6 @@ namespace HiAuRo.Helper;
 /// </summary>
 public class DRKHelper
 {
-    private readonly IHelperContext _ctx;
-
-    public DRKHelper(IHelperContext ctx)
-    {
-        _ctx = ctx;
-    }
 
     #region 技能 / Buff ID
 
@@ -26,21 +20,21 @@ public class DRKHelper
     #endregion
 
     /// <summary>暗黑骑士职业量谱</summary>
-    public DRKGauge? Gauge =>
+    public static DRKGauge? Gauge =>
         DService.Instance().JobGauges.Get<DRKGauge>();
 
     /// <summary>暗血值 (0-100)</summary>
-    public byte BloodGauge => Gauge?.Blood ?? 0;
+    public static byte BloodGauge => Gauge?.Blood ?? 0;
 
     /// <summary>血乱是否激活</summary>
-    public bool HasDelirium =>
-        _ctx.HasStatus(Delirium);
+    public static bool HasDelirium =>
+        HelperRuntime.HasStatus(Delirium);
 
     /// <summary>嗜血是否激活</summary>
-    public bool HasBloodWeapon =>
-        _ctx.HasStatus(BloodWeapon);
+    public static bool HasBloodWeapon =>
+        HelperRuntime.HasStatus(BloodWeapon);
 
     /// <summary>暗黑是否激活</summary>
-    public bool HasDarkside =>
-        _ctx.HasStatus(Darkside);
+    public static bool HasDarkside =>
+        HelperRuntime.HasStatus(Darkside);
 }

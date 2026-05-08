@@ -5,7 +5,6 @@ namespace HiAuRo.Helper;
 /// </summary>
 public class MNKHelper
 {
-    private readonly IHelperContext _ctx;
     public MNKHelper(IHelperContext ctx) { _ctx = ctx; }
 
     private const uint PerfectBalance = 110;     // 震脚
@@ -16,29 +15,29 @@ public class MNKHelper
     private const uint DisciplinedFist = 3001;   // 破坏神脚 (增伤buff)
 
     /// <summary>武僧职业量谱</summary>
-    public MNKGauge? Gauge => DService.Instance().JobGauges.Get<MNKGauge>();
+    public static MNKGauge? Gauge => DService.Instance().JobGauges.Get<MNKGauge>();
 
     /// <summary>查克拉数量</summary>
-    public byte ChakraCount => Gauge?.Chakra ?? 0;
+    public static byte ChakraCount => Gauge?.Chakra ?? 0;
 
     /// <summary>是否拥有最大查克拉</summary>
-    public bool HasMaxChakra => ChakraCount >= 5;
+    public static bool HasMaxChakra => ChakraCount >= 5;
 
     /// <summary>震脚是否激活</summary>
-    public bool HasPerfectBalance => _ctx.HasStatus(PerfectBalance);
+    public static bool HasPerfectBalance => HelperRuntime.HasStatus(PerfectBalance);
 
     /// <summary>红莲体势是否激活</summary>
-    public bool HasRiddleOfFire => _ctx.HasStatus(RiddleOfFire);
+    public static bool HasRiddleOfFire => HelperRuntime.HasStatus(RiddleOfFire);
 
     /// <summary>疾风体势是否激活</summary>
-    public bool HasRiddleOfWind => _ctx.HasStatus(RiddleOfWind);
+    public static bool HasRiddleOfWind => HelperRuntime.HasStatus(RiddleOfWind);
 
     /// <summary>义结金兰是否激活</summary>
-    public bool HasBrotherhood => _ctx.HasStatus(Brotherhood);
+    public static bool HasBrotherhood => HelperRuntime.HasStatus(Brotherhood);
 
     /// <summary>金刚体势是否激活</summary>
-    public bool HasLeadenFist => _ctx.HasStatus(LeadenFist);
+    public static bool HasLeadenFist => HelperRuntime.HasStatus(LeadenFist);
 
     /// <summary>破坏神脚增伤buff是否激活</summary>
-    public bool HasDisciplinedFist => _ctx.HasStatus(DisciplinedFist);
+    public static bool HasDisciplinedFist => HelperRuntime.HasStatus(DisciplinedFist);
 }

@@ -5,7 +5,6 @@ namespace HiAuRo.Helper;
 /// </summary>
 public class SAMHelper
 {
-    private readonly IHelperContext _ctx;
     public SAMHelper(IHelperContext ctx) { _ctx = ctx; }
 
     private const uint MeikyoShisui = 1233;      // 明镜止水
@@ -17,44 +16,44 @@ public class SAMHelper
     private const uint TsubameGaeshiReady = 1239; // 燕飞 (回返彼岸花预备)
 
     /// <summary>武士职业量谱</summary>
-    public SAMGauge? Gauge => DService.Instance().JobGauges.Get<SAMGauge>();
+    public static SAMGauge? Gauge => DService.Instance().JobGauges.Get<SAMGauge>();
 
     /// <summary>剑气值</summary>
-    public int Kenki => Gauge?.Kenki ?? 0;
+    public static int Kenki => Gauge?.Kenki ?? 0;
 
     /// <summary>冥想层数</summary>
-    public byte MeditationStacks => Gauge?.MeditationStacks ?? 0;
+    public static byte MeditationStacks => Gauge?.MeditationStacks ?? 0;
 
     /// <summary>是否拥有雪之闪</summary>
-    public bool HasSetsu => Gauge?.HasSetsu ?? false;
+    public static bool HasSetsu => Gauge?.HasSetsu ?? false;
 
     /// <summary>是否拥有月之闪</summary>
-    public bool HasGetsu => Gauge?.HasGetsu ?? false;
+    public static bool HasGetsu => Gauge?.HasGetsu ?? false;
 
     /// <summary>是否拥有花之闪</summary>
-    public bool HasKa => Gauge?.HasKa ?? false;
+    public static bool HasKa => Gauge?.HasKa ?? false;
 
     /// <summary>明镜止水是否激活</summary>
-    public bool HasMeikyoShisui => _ctx.HasStatus(MeikyoShisui);
+    public static bool HasMeikyoShisui => HelperRuntime.HasStatus(MeikyoShisui);
 
     /// <summary>彼岸花DoT是否激活</summary>
-    public bool HasHiganbana => _ctx.HasStatus(Higanbana);
+    public static bool HasHiganbana => HelperRuntime.HasStatus(Higanbana);
 
     /// <summary>阵风是否激活</summary>
-    public bool HasJinpu => _ctx.HasStatus(Jinpu);
+    public static bool HasJinpu => HelperRuntime.HasStatus(Jinpu);
 
     /// <summary>士风是否激活</summary>
-    public bool HasShifu => _ctx.HasStatus(Shifu);
+    public static bool HasShifu => HelperRuntime.HasStatus(Shifu);
 
     /// <summary>意气冲天是否激活</summary>
-    public bool HasIkishoten => _ctx.HasStatus(Ikishoten);
+    public static bool HasIkishoten => HelperRuntime.HasStatus(Ikishoten);
 
     /// <summary>奥义斩浪预备是否激活</summary>
-    public bool HasOgiNamikiriReady => _ctx.HasStatus(OgiNamikiriReady);
+    public static bool HasOgiNamikiriReady => HelperRuntime.HasStatus(OgiNamikiriReady);
 
     /// <summary>回返彼岸花预备是否激活</summary>
-    public bool HasTsubameGaeshiReady => _ctx.HasStatus(TsubameGaeshiReady);
+    public static bool HasTsubameGaeshiReady => HelperRuntime.HasStatus(TsubameGaeshiReady);
 
     /// <summary>是否拥有全部三闪 (雪/月/花)</summary>
-    public bool HasAllThreeSen => HasSetsu && HasGetsu && HasKa;
+    public static bool HasAllThreeSen => HasSetsu && HasGetsu && HasKa;
 }

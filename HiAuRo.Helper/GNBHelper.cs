@@ -6,12 +6,6 @@ namespace HiAuRo.Helper;
 /// </summary>
 public class GNBHelper
 {
-    private readonly IHelperContext _ctx;
-
-    public GNBHelper(IHelperContext ctx)
-    {
-        _ctx = ctx;
-    }
 
     #region 技能 / Buff ID
 
@@ -28,39 +22,39 @@ public class GNBHelper
     #endregion
 
     /// <summary>绝枪战士职业量谱</summary>
-    public GNBGauge? Gauge =>
+    public static GNBGauge? Gauge =>
         DService.Instance().JobGauges.Get<GNBGauge>();
 
     /// <summary>晶壤数量 (0-2)</summary>
-    public byte CartridgeCount => Gauge?.Ammo ?? 0;
+    public static byte CartridgeCount => Gauge?.Ammo ?? 0;
 
     /// <summary>是否有晶壤</summary>
-    public bool HasCartridge => CartridgeCount > 0;
+    public static bool HasCartridge => CartridgeCount > 0;
 
     /// <summary>晶壤是否已满 (2层)</summary>
-    public bool HasMaxCartridges => CartridgeCount >= 2;
+    public static bool HasMaxCartridges => CartridgeCount >= 2;
 
     /// <summary>无情是否激活</summary>
-    public bool HasNoMercy =>
-        _ctx.HasStatus(NoMercy);
+    public static bool HasNoMercy =>
+        HelperRuntime.HasStatus(NoMercy);
 
     /// <summary>王室亲卫是否激活</summary>
-    public bool HasRoyalGuard =>
-        _ctx.HasStatus(RoyalGuard);
+    public static bool HasRoyalGuard =>
+        HelperRuntime.HasStatus(RoyalGuard);
 
     /// <summary>残暴弹 (护盾buff) 是否激活</summary>
-    public bool HasBrutalShell =>
-        _ctx.HasStatus(BrutalShell);
+    public static bool HasBrutalShell =>
+        HelperRuntime.HasStatus(BrutalShell);
 
     /// <summary>撕喉预备是否激活</summary>
-    public bool HasReadyToRip =>
-        _ctx.HasStatus(ReadyToRip);
+    public static bool HasReadyToRip =>
+        HelperRuntime.HasStatus(ReadyToRip);
 
     /// <summary>裂膛预备是否激活</summary>
-    public bool HasReadyToTear =>
-        _ctx.HasStatus(ReadyToTear);
+    public static bool HasReadyToTear =>
+        HelperRuntime.HasStatus(ReadyToTear);
 
     /// <summary>穿目预备是否激活</summary>
-    public bool HasReadyToGouge =>
-        _ctx.HasStatus(ReadyToGouge);
+    public static bool HasReadyToGouge =>
+        HelperRuntime.HasStatus(ReadyToGouge);
 }

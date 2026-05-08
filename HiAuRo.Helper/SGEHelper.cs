@@ -6,12 +6,6 @@ namespace HiAuRo.Helper;
 /// </summary>
 public class SGEHelper
 {
-    private readonly IHelperContext _ctx;
-
-    public SGEHelper(IHelperContext ctx)
-    {
-        _ctx = ctx;
-    }
 
     #region 技能 / Buff / DoT ID
 
@@ -27,28 +21,28 @@ public class SGEHelper
     #endregion
 
     /// <summary>贤者职业量谱</summary>
-    public SGEGauge? Gauge =>
+    public static SGEGauge? Gauge =>
         DService.Instance().JobGauges.Get<SGEGauge>();
 
     /// <summary>蛇刺数量</summary>
-    public byte AdderstingCount => Gauge?.Addersting ?? 0;
+    public static byte AdderstingCount => Gauge?.Addersting ?? 0;
 
     /// <summary>是否拥有均衡状态</summary>
-    public bool HasEukrasia => Gauge?.Eukrasia ?? false;
+    public static bool HasEukrasia => Gauge?.Eukrasia ?? false;
 
     /// <summary>均衡状态是否激活</summary>
-    public bool HasEukrasiaStatus =>
-        _ctx.HasStatus(Eukrasia);
+    public static bool HasEukrasiaStatus =>
+        HelperRuntime.HasStatus(Eukrasia);
 
     /// <summary>泛输血是否激活</summary>
-    public bool HasHaima =>
-        _ctx.HasStatus(Haima);
+    public static bool HasHaima =>
+        HelperRuntime.HasStatus(Haima);
 
     /// <summary>整体论是否激活</summary>
-    public bool HasPanhaima =>
-        _ctx.HasStatus(Panhaima);
+    public static bool HasPanhaima =>
+        HelperRuntime.HasStatus(Panhaima);
 
     /// <summary>自生是否激活</summary>
-    public bool HasPhysis =>
-        _ctx.HasStatus(Physis);
+    public static bool HasPhysis =>
+        HelperRuntime.HasStatus(Physis);
 }

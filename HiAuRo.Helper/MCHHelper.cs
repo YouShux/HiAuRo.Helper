@@ -6,12 +6,6 @@ namespace HiAuRo.Helper;
 /// </summary>
 public class MCHHelper
 {
-    private readonly IHelperContext _ctx;
-
-    public MCHHelper(IHelperContext ctx)
-    {
-        _ctx = ctx;
-    }
 
     #region 技能 / Buff ID
 
@@ -24,26 +18,26 @@ public class MCHHelper
     #endregion
 
     /// <summary>机工士职业量谱</summary>
-    public MCHGauge? Gauge => DService.Instance().JobGauges.Get<MCHGauge>();
+    public static MCHGauge? Gauge => DService.Instance().JobGauges.Get<MCHGauge>();
 
     /// <summary>热量 (0-100)</summary>
-    public byte HeatGauge => Gauge?.Heat ?? 0;
+    public static byte HeatGauge => Gauge?.Heat ?? 0;
 
     /// <summary>电量 (0-100)</summary>
-    public byte BatteryGauge => Gauge?.Battery ?? 0;
+    public static byte BatteryGauge => Gauge?.Battery ?? 0;
 
     /// <summary>是否可以过热 (热量 >= 50)</summary>
-    public bool CanHypercharge => HeatGauge >= 50;
+    public static bool CanHypercharge => HeatGauge >= 50;
 
     /// <summary>是否可以召唤机器人 (电量 >= 50)</summary>
-    public bool CanSummonQueen => BatteryGauge >= 50;
+    public static bool CanSummonQueen => BatteryGauge >= 50;
 
     /// <summary>整备是否激活</summary>
-    public bool HasReassembled => _ctx.HasStatus(Reassembled);
+    public static bool HasReassembled => HelperRuntime.HasStatus(Reassembled);
 
     /// <summary>野火是否激活</summary>
-    public bool HasWildfire => _ctx.HasStatus(Wildfire);
+    public static bool HasWildfire => HelperRuntime.HasStatus(Wildfire);
 
     /// <summary>过热是否激活</summary>
-    public bool HasHypercharge => _ctx.HasStatus(Hypercharge);
+    public static bool HasHypercharge => HelperRuntime.HasStatus(Hypercharge);
 }

@@ -6,12 +6,6 @@ namespace HiAuRo.Helper;
 /// </summary>
 public class PCTHelper
 {
-    private readonly IHelperContext _ctx;
-
-    public PCTHelper(IHelperContext ctx)
-    {
-        _ctx = ctx;
-    }
 
     #region 技能 / Buff ID
 
@@ -26,14 +20,14 @@ public class PCTHelper
     #endregion
 
     /// <summary>绘灵法师职业量谱</summary>
-    public PCTGauge? Gauge => DService.Instance().JobGauges.Get<PCTGauge>();
+    public static PCTGauge? Gauge => DService.Instance().JobGauges.Get<PCTGauge>();
 
     /// <summary>画布是否可用</summary>
-    public bool IsCanvasReady => (Gauge?.PalleteGauge ?? 0) > 0;
+    public static bool IsCanvasReady => (Gauge?.PalleteGauge ?? 0) > 0;
 
     /// <summary>星空构想是否激活</summary>
-    public bool HasStarryMuse => _ctx.HasStatus(StarryMuse);
+    public static bool HasStarryMuse => HelperRuntime.HasStatus(StarryMuse);
 
     /// <summary>减色混合是否激活</summary>
-    public bool HasSubtractivePalette => _ctx.HasStatus(SubtractivePalette);
+    public static bool HasSubtractivePalette => HelperRuntime.HasStatus(SubtractivePalette);
 }

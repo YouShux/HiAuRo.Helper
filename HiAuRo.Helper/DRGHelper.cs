@@ -5,7 +5,6 @@ namespace HiAuRo.Helper;
 /// </summary>
 public class DRGHelper
 {
-    private readonly IHelperContext _ctx;
     public DRGHelper(IHelperContext ctx) { _ctx = ctx; }
 
     private const uint LifeSurge = 116;          // 龙剑
@@ -16,23 +15,23 @@ public class DRGHelper
     private const uint GeirskogulReady = 2719;   // 龙眼 (武神枪预备)
 
     /// <summary>龙骑士职业量谱</summary>
-    public DRGGauge? Gauge => DService.Instance().JobGauges.Get<DRGGauge>();
+    public static DRGGauge? Gauge => DService.Instance().JobGauges.Get<DRGGauge>();
 
     /// <summary>猛枪是否激活</summary>
-    public bool HasLanceCharge => _ctx.HasStatus(LanceCharge);
+    public static bool HasLanceCharge => HelperRuntime.HasStatus(LanceCharge);
 
     /// <summary>巨龙视线是否激活</summary>
-    public bool HasDragonSight => _ctx.HasStatus(DragonSight);
+    public static bool HasDragonSight => HelperRuntime.HasStatus(DragonSight);
 
     /// <summary>龙剑是否激活</summary>
-    public bool HasLifeSurge => _ctx.HasStatus(LifeSurge);
+    public static bool HasLifeSurge => HelperRuntime.HasStatus(LifeSurge);
 
     /// <summary>战斗连祷是否激活</summary>
-    public bool HasBattleLitany => _ctx.HasStatus(BattleLitany);
+    public static bool HasBattleLitany => HelperRuntime.HasStatus(BattleLitany);
 
     /// <summary>龙威是否激活</summary>
-    public bool HasPowerSurge => _ctx.HasStatus(PowerSurge);
+    public static bool HasPowerSurge => HelperRuntime.HasStatus(PowerSurge);
 
     /// <summary>武神枪预备是否激活</summary>
-    public bool HasGeirskogulReady => _ctx.HasStatus(GeirskogulReady);
+    public static bool HasGeirskogulReady => HelperRuntime.HasStatus(GeirskogulReady);
 }

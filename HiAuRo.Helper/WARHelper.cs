@@ -8,9 +8,6 @@ namespace HiAuRo.Helper;
 /// </summary>
 public class WARHelper
 {
-    private readonly IHelperContext _ctx;
-
-    public WARHelper(IHelperContext ctx) { _ctx = ctx; }
 
     #region 技能 ID 常量
 
@@ -115,27 +112,27 @@ public class WARHelper
 
     #region 实例属性 — 状态查询
 
-    public WARGauge? Gauge => DService.Instance().JobGauges.Get<WARGauge>();
-    public byte BeastGauge => Gauge?.BeastGauge ?? 0;
+    public static WARGauge? Gauge => DService.Instance().JobGauges.Get<WARGauge>();
+    public static byte BeastGauge => Gauge?.BeastGauge ?? 0;
 
-    public bool HasInnerRelease => _ctx.HasStatus(_原初的解放);
-    public bool HasBerserk => _ctx.HasStatus(_狂暴);
-    public bool HasSurgingTempest => _ctx.HasStatus(_红斩);
-    public bool HasNascentChaos => _ctx.HasStatus(_原初的混沌);
+    public static bool HasInnerRelease => HelperRuntime.HasStatus(_原初的解放);
+    public static bool HasBerserk => HelperRuntime.HasStatus(_狂暴);
+    public static bool HasSurgingTempest => HelperRuntime.HasStatus(_红斩);
+    public static bool HasNascentChaos => HelperRuntime.HasStatus(_原初的混沌);
 
-    public bool Has红斩 => _ctx.HasStatus(_红斩);
-    public bool Has原初的解放 => _ctx.HasStatus(_原初的解放);
-    public bool Has狂暴 => _ctx.HasStatus(_狂暴);
-    public bool Has原初的混沌 => _ctx.HasStatus(_原初的混沌);
-    public bool Has原初的觉悟 => _ctx.HasStatus(_原初的觉悟);
-    public bool Has战栗 => _ctx.HasStatus(_战栗);
-    public bool Has复仇 => _ctx.HasStatus(_复仇);
-    public bool Has死斗 => _ctx.HasStatus(_死斗);
-    public bool Has蛮荒崩裂预备 => _ctx.HasStatus(_蛮荒崩裂预备);
-    public bool Has尽毁预备 => _ctx.HasStatus(_尽毁预备);
-    public bool Has原初的怒震预备 => _ctx.HasStatus(_原初的怒震预备);
-    public bool Has原初的血气 => _ctx.HasStatus(_原初的血气);
-    public bool Has守护 => _ctx.HasStatus(_守护);
+    public static bool Has红斩 => HelperRuntime.HasStatus(_红斩);
+    public static bool Has原初的解放 => HelperRuntime.HasStatus(_原初的解放);
+    public static bool Has狂暴 => HelperRuntime.HasStatus(_狂暴);
+    public static bool Has原初的混沌 => HelperRuntime.HasStatus(_原初的混沌);
+    public static bool Has原初的觉悟 => HelperRuntime.HasStatus(_原初的觉悟);
+    public static bool Has战栗 => HelperRuntime.HasStatus(_战栗);
+    public static bool Has复仇 => HelperRuntime.HasStatus(_复仇);
+    public static bool Has死斗 => HelperRuntime.HasStatus(_死斗);
+    public static bool Has蛮荒崩裂预备 => HelperRuntime.HasStatus(_蛮荒崩裂预备);
+    public static bool Has尽毁预备 => HelperRuntime.HasStatus(_尽毁预备);
+    public static bool Has原初的怒震预备 => HelperRuntime.HasStatus(_原初的怒震预备);
+    public static bool Has原初的血气 => HelperRuntime.HasStatus(_原初的血气);
+    public static bool Has守护 => HelperRuntime.HasStatus(_守护);
 
     #endregion
 }

@@ -5,7 +5,6 @@ namespace HiAuRo.Helper;
 /// </summary>
 public class VPRHelper
 {
-    private readonly IHelperContext _ctx;
     public VPRHelper(IHelperContext ctx) { _ctx = ctx; }
 
     private const uint HuntersInstinct = 3962;   // 猎人直觉 (增伤buff)
@@ -15,20 +14,20 @@ public class VPRHelper
     private const uint Reawakened = 3967;        // 强碎灵蛇 (附体buff)
 
     /// <summary>蝰蛇剑士职业量谱</summary>
-    public VPRGauge? Gauge => DService.Instance().JobGauges.Get<VPRGauge>();
+    public static VPRGauge? Gauge => DService.Instance().JobGauges.Get<VPRGauge>();
 
     /// <summary>猎人直觉是否激活</summary>
-    public bool HasHuntersInstinct => _ctx.HasStatus(HuntersInstinct);
+    public static bool HasHuntersInstinct => HelperRuntime.HasStatus(HuntersInstinct);
 
     /// <summary>疾速之牙是否激活</summary>
-    public bool HasSwiftscaled => _ctx.HasStatus(Swiftscaled);
+    public static bool HasSwiftscaled => HelperRuntime.HasStatus(Swiftscaled);
 
     /// <summary>强碎灵蛇附体是否激活</summary>
-    public bool HasReawakened => _ctx.HasStatus(Reawakened);
+    public static bool HasReawakened => HelperRuntime.HasStatus(Reawakened);
 
     /// <summary>侧击预备是否激活</summary>
-    public bool HasFlankstingReady => _ctx.HasStatus(FlankstingReady);
+    public static bool HasFlankstingReady => HelperRuntime.HasStatus(FlankstingReady);
 
     /// <summary>侧袭预备是否激活</summary>
-    public bool HasFlanksbaneReady => _ctx.HasStatus(FlanksbaneReady);
+    public static bool HasFlanksbaneReady => HelperRuntime.HasStatus(FlanksbaneReady);
 }

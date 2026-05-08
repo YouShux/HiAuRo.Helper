@@ -6,12 +6,6 @@ namespace HiAuRo.Helper;
 /// </summary>
 public class WHMHelper
 {
-    private readonly IHelperContext _ctx;
-
-    public WHMHelper(IHelperContext ctx)
-    {
-        _ctx = ctx;
-    }
 
     #region 技能 / Buff / DoT ID
 
@@ -27,30 +21,30 @@ public class WHMHelper
     #endregion
 
     /// <summary>白魔法师职业量谱</summary>
-    public WHMGauge? Gauge =>
+    public static WHMGauge? Gauge =>
         DService.Instance().JobGauges.Get<WHMGauge>();
 
     /// <summary>百合数量</summary>
-    public byte LilyCount => Gauge?.Lily ?? 0;
+    public static byte LilyCount => Gauge?.Lily ?? 0;
 
     /// <summary>血百合数量</summary>
-    public byte BloodLilyCount => Gauge?.BloodLily ?? 0;
+    public static byte BloodLilyCount => Gauge?.BloodLily ?? 0;
 
     /// <summary>神速咏唱是否激活</summary>
-    public bool HasPresenceOfMind =>
-        _ctx.HasStatus(PresenceOfMind);
+    public static bool HasPresenceOfMind =>
+        HelperRuntime.HasStatus(PresenceOfMind);
 
     /// <summary>无中生有是否激活</summary>
-    public bool HasThinAir =>
-        _ctx.HasStatus(ThinAir);
+    public static bool HasThinAir =>
+        HelperRuntime.HasStatus(ThinAir);
 
     /// <summary>节制是否激活</summary>
-    public bool HasTemperance =>
-        _ctx.HasStatus(Temperance);
+    public static bool HasTemperance =>
+        HelperRuntime.HasStatus(Temperance);
 
     /// <summary>是否有百合可用</summary>
-    public bool HasLilyReady => LilyCount > 0;
+    public static bool HasLilyReady => LilyCount > 0;
 
     /// <summary>是否有血百合可用</summary>
-    public bool HasBloodLilyReady => BloodLilyCount >= 3;
+    public static bool HasBloodLilyReady => BloodLilyCount >= 3;
 }

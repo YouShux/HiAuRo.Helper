@@ -6,12 +6,6 @@ namespace HiAuRo.Helper;
 /// </summary>
 public class DNCHelper
 {
-    private readonly IHelperContext _ctx;
-
-    public DNCHelper(IHelperContext ctx)
-    {
-        _ctx = ctx;
-    }
 
     #region 技能 / Buff ID
 
@@ -27,23 +21,23 @@ public class DNCHelper
     #endregion
 
     /// <summary>舞者职业量谱</summary>
-    public DNCGauge? Gauge => DService.Instance().JobGauges.Get<DNCGauge>();
+    public static DNCGauge? Gauge => DService.Instance().JobGauges.Get<DNCGauge>();
 
     /// <summary>伶俐值 (0-100)</summary>
-    public byte EspritGauge => Gauge?.Esprit ?? 0;
+    public static byte EspritGauge => Gauge?.Esprit ?? 0;
 
     /// <summary>是否可以发动进攻之探戈 (伶俐 >= 50)</summary>
-    public bool CanDevilment => EspritGauge >= 50;
+    public static bool CanDevilment => EspritGauge >= 50;
 
     /// <summary>幻扇层数</summary>
-    public byte FeathersCount => Gauge?.Feathers ?? 0;
+    public static byte FeathersCount => Gauge?.Feathers ?? 0;
 
     /// <summary>技巧舞步结束是否激活</summary>
-    public bool HasTechnicalFinish => _ctx.HasStatus(TechnicalStep);
+    public static bool HasTechnicalFinish => HelperRuntime.HasStatus(TechnicalStep);
 
     /// <summary>标准舞步结束是否激活</summary>
-    public bool HasStandardFinish => _ctx.HasStatus(StandardStep);
+    public static bool HasStandardFinish => HelperRuntime.HasStatus(StandardStep);
 
     /// <summary>进攻之探戈是否激活</summary>
-    public bool HasDevilment => _ctx.HasStatus(Devilment);
+    public static bool HasDevilment => HelperRuntime.HasStatus(Devilment);
 }

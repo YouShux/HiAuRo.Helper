@@ -6,12 +6,6 @@ namespace HiAuRo.Helper;
 /// </summary>
 public class SCHHelper
 {
-    private readonly IHelperContext _ctx;
-
-    public SCHHelper(IHelperContext ctx)
-    {
-        _ctx = ctx;
-    }
 
     #region 技能 / Buff / DoT ID
 
@@ -26,28 +20,28 @@ public class SCHHelper
     #endregion
 
     /// <summary>学者职业量谱</summary>
-    public SCHGauge? Gauge =>
+    public static SCHGauge? Gauge =>
         DService.Instance().JobGauges.Get<SCHGauge>();
 
     /// <summary>以太超流层数</summary>
-    public byte AetherflowCount => Gauge?.Aetherflow ?? 0;
+    public static byte AetherflowCount => Gauge?.Aetherflow ?? 0;
 
     /// <summary>是否拥有以太超流</summary>
-    public bool HasAetherflow => AetherflowCount > 0;
+    public static bool HasAetherflow => AetherflowCount > 0;
 
     /// <summary>连环计是否激活</summary>
-    public bool HasChainStratagem =>
-        _ctx.HasStatus(ChainStratagem);
+    public static bool HasChainStratagem =>
+        HelperRuntime.HasStatus(ChainStratagem);
 
     /// <summary>转化是否激活</summary>
-    public bool HasRecitation =>
-        _ctx.HasStatus(Recitation);
+    public static bool HasRecitation =>
+        HelperRuntime.HasStatus(Recitation);
 
     /// <summary>疾风怒涛之计是否激活</summary>
-    public bool HasExpedient =>
-        _ctx.HasStatus(Expedient);
+    public static bool HasExpedient =>
+        HelperRuntime.HasStatus(Expedient);
 
     /// <summary>炽天炽翼是否激活</summary>
-    public bool HasSeraphism =>
-        _ctx.HasStatus(Seraphism);
+    public static bool HasSeraphism =>
+        HelperRuntime.HasStatus(Seraphism);
 }

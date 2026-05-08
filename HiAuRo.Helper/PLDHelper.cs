@@ -6,12 +6,6 @@ namespace HiAuRo.Helper;
 /// </summary>
 public class PLDHelper
 {
-    private readonly IHelperContext _ctx;
-
-    public PLDHelper(IHelperContext ctx)
-    {
-        _ctx = ctx;
-    }
 
     #region 技能 / Buff ID
 
@@ -26,21 +20,21 @@ public class PLDHelper
     #endregion
 
     /// <summary>骑士职业量谱</summary>
-    public PLDGauge? Gauge =>
+    public static PLDGauge? Gauge =>
         DService.Instance().JobGauges.Get<PLDGauge>();
 
     /// <summary>忠义值 (0-100)</summary>
-    public byte OathGauge => Gauge?.OathGauge ?? 0;
+    public static byte OathGauge => Gauge?.OathGauge ?? 0;
 
     /// <summary>安魂祈祷是否激活</summary>
-    public bool HasRequiescat =>
-        _ctx.HasStatus(Requiescat);
+    public static bool HasRequiescat =>
+        HelperRuntime.HasStatus(Requiescat);
 
     /// <summary>战逃反应是否激活</summary>
-    public bool HasFightOrFlight =>
-        _ctx.HasStatus(FightOrFlight);
+    public static bool HasFightOrFlight =>
+        HelperRuntime.HasStatus(FightOrFlight);
 
     /// <summary>圣光之力 (赎罪剑预备) 是否激活</summary>
-    public bool HasDivineMight =>
-        _ctx.HasStatus(DivineMight);
+    public static bool HasDivineMight =>
+        HelperRuntime.HasStatus(DivineMight);
 }

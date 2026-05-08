@@ -6,12 +6,6 @@ namespace HiAuRo.Helper;
 /// </summary>
 public class ASTHelper
 {
-    private readonly IHelperContext _ctx;
-
-    public ASTHelper(IHelperContext ctx)
-    {
-        _ctx = ctx;
-    }
 
     #region 技能 / Buff / DoT ID
 
@@ -30,18 +24,18 @@ public class ASTHelper
     #endregion
 
     /// <summary>占星术士职业量谱</summary>
-    public ASTGauge? Gauge =>
+    public static ASTGauge? Gauge =>
         DService.Instance().JobGauges.Get<ASTGauge>();
 
     /// <summary>占卜是否激活</summary>
-    public bool HasDivination =>
-        _ctx.HasStatus(Divination);
+    public static bool HasDivination =>
+        HelperRuntime.HasStatus(Divination);
 
     /// <summary>光速是否激活</summary>
-    public bool HasLightspeed =>
-        _ctx.HasStatus(Lightspeed);
+    public static bool HasLightspeed =>
+        HelperRuntime.HasStatus(Lightspeed);
 
     /// <summary>中间学派是否激活</summary>
-    public bool HasNeutralSect =>
-        _ctx.HasStatus(NeutralSect);
+    public static bool HasNeutralSect =>
+        HelperRuntime.HasStatus(NeutralSect);
 }

@@ -5,7 +5,6 @@ namespace HiAuRo.Helper;
 /// </summary>
 public class NINHelper
 {
-    private readonly IHelperContext _ctx;
     public NINHelper(IHelperContext ctx) { _ctx = ctx; }
 
     private const uint Kassatsu = 497;           // 生杀予夺
@@ -13,20 +12,20 @@ public class NINHelper
     private const uint Bunshin = 1954;           // 分身之术
 
     /// <summary>忍者职业量谱</summary>
-    public NINGauge? Gauge => DService.Instance().JobGauges.Get<NINGauge>();
+    public static NINGauge? Gauge => DService.Instance().JobGauges.Get<NINGauge>();
 
     /// <summary>忍气值</summary>
-    public byte Ninki => Gauge?.Ninki ?? 0;
+    public static byte Ninki => Gauge?.Ninki ?? 0;
 
     /// <summary>是否拥有最大忍气</summary>
-    public bool HasMaxNinki => Ninki >= 100;
+    public static bool HasMaxNinki => Ninki >= 100;
 
     /// <summary>生杀予夺是否激活</summary>
-    public bool HasKassatsu => _ctx.HasStatus(Kassatsu);
+    public static bool HasKassatsu => HelperRuntime.HasStatus(Kassatsu);
 
     /// <summary>天地人是否激活</summary>
-    public bool HasTenChiJin => _ctx.HasStatus(TenChiJin);
+    public static bool HasTenChiJin => HelperRuntime.HasStatus(TenChiJin);
 
     /// <summary>分身之术是否激活</summary>
-    public bool HasBunshin => _ctx.HasStatus(Bunshin);
+    public static bool HasBunshin => HelperRuntime.HasStatus(Bunshin);
 }
