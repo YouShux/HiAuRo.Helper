@@ -21,8 +21,7 @@ public class SGEHelper
     #endregion
 
     /// <summary>贤者职业量谱</summary>
-    public static SGEGauge? Gauge =>
-        DService.Instance().JobGauges.Get<SGEGauge>();
+    public static SGEGauge? Gauge => HelperRuntime.GetGauge<SGEGauge>();
 
     /// <summary>蛇刺数量</summary>
     public static byte AdderstingCount => Gauge?.Addersting ?? 0;

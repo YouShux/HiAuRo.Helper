@@ -20,8 +20,7 @@ public class PLDHelper
     #endregion
 
     /// <summary>骑士职业量谱</summary>
-    public static PLDGauge? Gauge =>
-        DService.Instance().JobGauges.Get<PLDGauge>();
+    public static PLDGauge? Gauge => HelperRuntime.GetGauge<PLDGauge>();
 
     /// <summary>忠义值 (0-100)</summary>
     public static byte OathGauge => Gauge?.OathGauge ?? 0;

@@ -22,8 +22,7 @@ public class GNBHelper
     #endregion
 
     /// <summary>绝枪战士职业量谱</summary>
-    public static GNBGauge? Gauge =>
-        DService.Instance().JobGauges.Get<GNBGauge>();
+    public static GNBGauge? Gauge => HelperRuntime.GetGauge<GNBGauge>();
 
     /// <summary>晶壤数量 (0-2)</summary>
     public static byte CartridgeCount => Gauge?.Ammo ?? 0;

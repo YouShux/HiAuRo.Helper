@@ -14,7 +14,7 @@ public class MNKHelper
     private const uint DisciplinedFist = 3001;   // 破坏神脚 (增伤buff)
 
     /// <summary>武僧职业量谱</summary>
-    public static MNKGauge? Gauge => DService.Instance().JobGauges.Get<MNKGauge>();
+    public static MNKGauge? Gauge => HelperRuntime.GetGauge<MNKGauge>();
 
     /// <summary>查克拉数量</summary>
     public static byte ChakraCount => Gauge?.Chakra ?? 0;

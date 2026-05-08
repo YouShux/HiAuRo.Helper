@@ -20,7 +20,7 @@ public class PCTHelper
     #endregion
 
     /// <summary>绘灵法师职业量谱</summary>
-    public static PCTGauge? Gauge => DService.Instance().JobGauges.Get<PCTGauge>();
+    public static PCTGauge? Gauge => HelperRuntime.GetGauge<PCTGauge>();
 
     /// <summary>画布是否可用</summary>
     public static bool IsCanvasReady => (Gauge?.PalleteGauge ?? 0) > 0;

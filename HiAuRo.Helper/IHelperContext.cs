@@ -12,4 +12,5 @@ internal interface IHelperContext
 {
     bool HasStatus(uint statusId);
     bool HasStatusOnTarget(uint statusId);
+    T? GetGauge<T>() where T : class;
 }

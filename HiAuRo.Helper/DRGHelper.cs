@@ -14,7 +14,7 @@ public class DRGHelper
     private const uint GeirskogulReady = 2719;   // 龙眼 (武神枪预备)
 
     /// <summary>龙骑士职业量谱</summary>
-    public static DRGGauge? Gauge => DService.Instance().JobGauges.Get<DRGGauge>();
+    public static DRGGauge? Gauge => HelperRuntime.GetGauge<DRGGauge>();
 
     /// <summary>猛枪是否激活</summary>
     public static bool HasLanceCharge => HelperRuntime.HasStatus(LanceCharge);

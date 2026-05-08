@@ -13,7 +13,7 @@ public class VPRHelper
     private const uint Reawakened = 3967;        // 强碎灵蛇 (附体buff)
 
     /// <summary>蝰蛇剑士职业量谱</summary>
-    public static VPRGauge? Gauge => DService.Instance().JobGauges.Get<VPRGauge>();
+    public static VPRGauge? Gauge => HelperRuntime.GetGauge<VPRGauge>();
 
     /// <summary>猎人直觉是否激活</summary>
     public static bool HasHuntersInstinct => HelperRuntime.HasStatus(HuntersInstinct);

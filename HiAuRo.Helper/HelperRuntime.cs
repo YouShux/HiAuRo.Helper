@@ -14,4 +14,7 @@ public static class HelperRuntime
 
     internal static bool HasStatusOnTarget(uint statusId) =>
         _ctx?.HasStatusOnTarget(statusId) ?? false;
+
+    internal static T? GetGauge<T>() where T : class =>
+        _ctx?.GetGauge<T>();
 }

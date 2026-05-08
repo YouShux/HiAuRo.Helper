@@ -109,7 +109,7 @@ public class WARHelper
 
     #region 实例属性 — 状态查询
 
-    public static WARGauge? Gauge => DService.Instance().JobGauges.Get<WARGauge>();
+    public static WARGauge? Gauge => HelperRuntime.GetGauge<WARGauge>();
     public static byte BeastGauge => Gauge?.BeastGauge ?? 0;
 
     public static bool HasInnerRelease => HelperRuntime.HasStatus(_原初的解放);

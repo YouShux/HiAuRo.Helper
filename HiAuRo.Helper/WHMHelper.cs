@@ -21,8 +21,7 @@ public class WHMHelper
     #endregion
 
     /// <summary>白魔法师职业量谱</summary>
-    public static WHMGauge? Gauge =>
-        DService.Instance().JobGauges.Get<WHMGauge>();
+    public static WHMGauge? Gauge => HelperRuntime.GetGauge<WHMGauge>();
 
     /// <summary>百合数量</summary>
     public static byte LilyCount => Gauge?.Lily ?? 0;

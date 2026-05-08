@@ -15,7 +15,7 @@ public class SAMHelper
     private const uint TsubameGaeshiReady = 1239; // 燕飞 (回返彼岸花预备)
 
     /// <summary>武士职业量谱</summary>
-    public static SAMGauge? Gauge => DService.Instance().JobGauges.Get<SAMGauge>();
+    public static SAMGauge? Gauge => HelperRuntime.GetGauge<SAMGauge>();
 
     /// <summary>剑气值</summary>
     public static int Kenki => Gauge?.Kenki ?? 0;

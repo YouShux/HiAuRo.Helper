@@ -18,7 +18,7 @@ public class MCHHelper
     #endregion
 
     /// <summary>机工士职业量谱</summary>
-    public static MCHGauge? Gauge => DService.Instance().JobGauges.Get<MCHGauge>();
+    public static MCHGauge? Gauge => HelperRuntime.GetGauge<MCHGauge>();
 
     /// <summary>热量 (0-100)</summary>
     public static byte HeatGauge => Gauge?.Heat ?? 0;

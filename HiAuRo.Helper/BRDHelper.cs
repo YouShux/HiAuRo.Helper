@@ -21,8 +21,7 @@ public class BRDHelper
     #endregion
 
     /// <summary>诗人职业量谱</summary>
-    public static BRDGauge? Gauge =>
-        DService.Instance().JobGauges.Get<BRDGauge>();
+    public static BRDGauge? Gauge => HelperRuntime.GetGauge<BRDGauge>();
 
     /// <summary>当前歌曲类型</summary>
     public static Song CurrentSong => Gauge?.Song ?? Song.None;

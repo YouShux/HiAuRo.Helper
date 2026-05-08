@@ -20,8 +20,7 @@ public class DRKHelper
     #endregion
 
     /// <summary>暗黑骑士职业量谱</summary>
-    public static DRKGauge? Gauge =>
-        DService.Instance().JobGauges.Get<DRKGauge>();
+    public static DRKGauge? Gauge => HelperRuntime.GetGauge<DRKGauge>();
 
     /// <summary>暗血值 (0-100)</summary>
     public static byte BloodGauge => Gauge?.Blood ?? 0;

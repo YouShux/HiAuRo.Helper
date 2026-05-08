@@ -11,7 +11,7 @@ public class RPRHelper
     private const uint Enshrouded = 2593;        // 夜游魂 (附体buff)
 
     /// <summary>钐镰客职业量谱</summary>
-    public static RPRGauge? Gauge => DService.Instance().JobGauges.Get<RPRGauge>();
+    public static RPRGauge? Gauge => HelperRuntime.GetGauge<RPRGauge>();
 
     /// <summary>魂量值</summary>
     public static byte SoulGauge => Gauge?.Soul ?? 0;

@@ -21,7 +21,7 @@ public class BLMHelper
     #endregion
 
     /// <summary>黑魔法师职业量谱</summary>
-    public static BLMGauge? Gauge => DService.Instance().JobGauges.Get<BLMGauge>();
+    public static BLMGauge? Gauge => HelperRuntime.GetGauge<BLMGauge>();
 
     /// <summary>是否处于星极火状态</summary>
     public static bool InAstralFire => Gauge?.InAstralFire ?? false;

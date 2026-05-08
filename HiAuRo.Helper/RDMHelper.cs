@@ -19,7 +19,7 @@ public class RDMHelper
     #endregion
 
     /// <summary>赤魔法师职业量谱</summary>
-    public static RDMGauge? Gauge => DService.Instance().JobGauges.Get<RDMGauge>();
+    public static RDMGauge? Gauge => HelperRuntime.GetGauge<RDMGauge>();
 
     /// <summary>白魔元 (0-100)</summary>
     public static byte WhiteMana => Gauge?.WhiteMana ?? 0;

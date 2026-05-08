@@ -24,8 +24,7 @@ public class ASTHelper
     #endregion
 
     /// <summary>占星术士职业量谱</summary>
-    public static ASTGauge? Gauge =>
-        DService.Instance().JobGauges.Get<ASTGauge>();
+    public static ASTGauge? Gauge => HelperRuntime.GetGauge<ASTGauge>();
 
     /// <summary>占卜是否激活</summary>
     public static bool HasDivination =>

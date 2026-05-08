@@ -19,12 +19,4 @@
     <PackageTags>FFXIV;Dalamud;ACR;rotation</PackageTags>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\OmenTools\OmenTools.csproj"
-                      Condition="Exists('..\OmenTools\OmenTools.csproj')">
-      <Private>False</Private>
-      <PrivateAssets>all</PrivateAssets>
-    </ProjectReference>
-  </ItemGroup>
-
 </Project>

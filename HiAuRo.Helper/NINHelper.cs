@@ -11,7 +11,7 @@ public class NINHelper
     private const uint Bunshin = 1954;           // 分身之术
 
     /// <summary>忍者职业量谱</summary>
-    public static NINGauge? Gauge => DService.Instance().JobGauges.Get<NINGauge>();
+    public static NINGauge? Gauge => HelperRuntime.GetGauge<NINGauge>();
 
     /// <summary>忍气值</summary>
     public static byte Ninki => Gauge?.Ninki ?? 0;

@@ -20,8 +20,7 @@ public class SCHHelper
     #endregion
 
     /// <summary>学者职业量谱</summary>
-    public static SCHGauge? Gauge =>
-        DService.Instance().JobGauges.Get<SCHGauge>();
+    public static SCHGauge? Gauge => HelperRuntime.GetGauge<SCHGauge>();
 
     /// <summary>以太超流层数</summary>
     public static byte AetherflowCount => Gauge?.Aetherflow ?? 0;

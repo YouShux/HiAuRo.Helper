@@ -21,7 +21,7 @@ public class DNCHelper
     #endregion
 
     /// <summary>舞者职业量谱</summary>
-    public static DNCGauge? Gauge => DService.Instance().JobGauges.Get<DNCGauge>();
+    public static DNCGauge? Gauge => HelperRuntime.GetGauge<DNCGauge>();
 
     /// <summary>伶俐值 (0-100)</summary>
     public static byte EspritGauge => Gauge?.Esprit ?? 0;

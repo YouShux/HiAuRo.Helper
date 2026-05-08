@@ -19,7 +19,7 @@ public class SMNHelper
     #endregion
 
     /// <summary>召唤师职业量谱</summary>
-    public static SMNGauge? Gauge => DService.Instance().JobGauges.Get<SMNGauge>();
+    public static SMNGauge? Gauge => HelperRuntime.GetGauge<SMNGauge>();
 
     /// <summary>是否处于巴哈/不死鸟附体状态</summary>
     public static bool IsInBahamut => Gauge?.SummonTimerRemaining > 0;
