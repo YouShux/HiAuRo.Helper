@@ -5,7 +5,6 @@ namespace HiAuRo.Helper;
 /// </summary>
 public class VPRHelper
 {
-    public VPRHelper(IHelperContext ctx) { _ctx = ctx; }
 
     private const uint HuntersInstinct = 3962;   // 猎人直觉 (增伤buff)
     private const uint Swiftscaled = 3963;       // 疾速之牙 (加速buff)

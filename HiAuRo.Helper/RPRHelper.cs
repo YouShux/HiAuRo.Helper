@@ -5,7 +5,6 @@ namespace HiAuRo.Helper;
 /// </summary>
 public class RPRHelper
 {
-    public RPRHelper(IHelperContext ctx) { _ctx = ctx; }
 
     private const uint ArcaneCircle = 2577;      // 神秘环
     private const uint SoulSow = 2591;           // 播魂种 (buff)

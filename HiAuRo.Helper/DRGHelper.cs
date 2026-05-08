@@ -5,7 +5,6 @@ namespace HiAuRo.Helper;
 /// </summary>
 public class DRGHelper
 {
-    public DRGHelper(IHelperContext ctx) { _ctx = ctx; }
 
     private const uint LifeSurge = 116;          // 龙剑
     private const uint LanceCharge = 1864;       // 猛枪

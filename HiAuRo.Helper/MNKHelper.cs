@@ -5,7 +5,6 @@ namespace HiAuRo.Helper;
 /// </summary>
 public class MNKHelper
 {
-    public MNKHelper(IHelperContext ctx) { _ctx = ctx; }
 
     private const uint PerfectBalance = 110;     // 震脚
     private const uint RiddleOfFire = 1181;      // 红莲体势

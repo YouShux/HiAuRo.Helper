@@ -5,7 +5,6 @@ namespace HiAuRo.Helper;
 /// </summary>
 public class SAMHelper
 {
-    public SAMHelper(IHelperContext ctx) { _ctx = ctx; }
 
     private const uint MeikyoShisui = 1233;      // 明镜止水
     private const uint Higanbana = 1228;         // 彼岸花 (DoT)

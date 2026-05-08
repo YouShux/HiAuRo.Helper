@@ -5,7 +5,6 @@ namespace HiAuRo.Helper;
 /// </summary>
 public class NINHelper
 {
-    public NINHelper(IHelperContext ctx) { _ctx = ctx; }
 
     private const uint Kassatsu = 497;           // 生杀予夺
     private const uint TenChiJin = 1186;         // 天地人
