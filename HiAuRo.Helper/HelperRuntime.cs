@@ -59,4 +59,21 @@ public static class HelperRuntime
 
     internal static uint GetActionChange(uint spellId) =>
         _ctx?.GetActionChange(spellId) ?? spellId;
+
+    // ── 队伍查询 ──
+
+    internal static int GetPartyCount() =>
+        _ctx?.GetPartyCount() ?? 0;
+
+    internal static bool IsPartyMemberAlive(int index) =>
+        _ctx?.IsPartyMemberAlive(index) ?? false;
+
+    internal static float GetPartyMemberHP(int index) =>
+        _ctx?.GetPartyMemberHP(index) ?? 0f;
+
+    internal static float GetPartyMemberMaxHP(int index) =>
+        _ctx?.GetPartyMemberMaxHP(index) ?? 0f;
+
+    internal static float GetPartyMemberHPPercent(int index) =>
+        _ctx?.GetPartyMemberHPPercent(index) ?? 0f;
 }
