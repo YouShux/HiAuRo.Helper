@@ -9,14 +9,14 @@ public class WHMHelper
 
     #region 技能 / Buff / DoT ID
 
-    private const uint PresenceOfMind = 157;      // 神速咏唱
-    private const uint ThinAir = 1217;            // 无中生有
-    private const uint Temperance = 1873;         // 节制
-    private const uint Regen = 158;               // 再生 (buff)
-    private const uint Medica2 = 150;             // 医济 (buff)
-    private const uint DivineBenison = 1218;      // 神祝祷
-    private const uint Aquaveil = 2704;           // 水流幕
-    private const uint LiturgyOfTheBell = 2851;   // 礼仪之铃
+    public const uint PresenceOfMind = 157;      // 神速咏唱
+    public const uint ThinAir = 1217;            // 无中生有
+    public const uint Temperance = 1873;         // 节制
+    public const uint Regen = 158;               // 再生 (buff)
+    public const uint Medica2 = 150;             // 医济 (buff)
+    public const uint DivineBenison = 1218;      // 神祝祷
+    public const uint Aquaveil = 2704;           // 水流幕
+    public const uint LiturgyOfTheBell = 2851;   // 礼仪之铃
 
     #endregion
 

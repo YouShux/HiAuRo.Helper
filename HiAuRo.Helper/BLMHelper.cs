@@ -9,14 +9,14 @@ public class BLMHelper
 
     #region 技能 / Buff ID
 
-    private const uint Enochian = 868;           // 天语
-    private const uint LeyLines = 737;           // 黑魔纹
-    private const uint Thunder3 = 163;           // 暴雷 (DoT)
-    private const uint Triplecast = 1211;        // 三连咏唱
-    private const uint Manafont = 158;           // 魔泉
-    private const uint Sharpcast = 867;          // 激情咏唱
-    private const uint Amplifier = 2968;         // 详述 (buff — Polyglot gain)
-    private const uint ParadoxReady = 2981;      // 悖论预备
+    public const uint Enochian = 868;           // 天语
+    public const uint LeyLines = 737;           // 黑魔纹
+    public const uint Thunder3 = 163;           // 暴雷 (DoT)
+    public const uint Triplecast = 1211;        // 三连咏唱
+    public const uint Manafont = 158;           // 魔泉
+    public const uint Sharpcast = 867;          // 激情咏唱
+    public const uint Amplifier = 2968;         // 详述 (buff — Polyglot gain)
+    public const uint ParadoxReady = 2981;      // 悖论预备
 
     #endregion
 

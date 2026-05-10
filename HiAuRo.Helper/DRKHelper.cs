@@ -9,13 +9,13 @@ public class DRKHelper
 
     #region 技能 / Buff ID
 
-    private const uint Delirium            = 1972;   // 血乱
-    private const uint BloodWeapon         = 742;    // 嗜血
-    private const uint Darkside            = 751;    // 暗黑
-    private const uint DarkMissionary      = 747;    // 暗黑布道
-    private const uint ShadowWall          = 747;    // 暗影墙
-    private const uint LivingDead          = 810;    // 行尸走肉
-    private const uint Oblation            = 2578;   // 献祭
+    public const uint Delirium            = 1972;   // 血乱
+    public const uint BloodWeapon         = 742;    // 嗜血
+    public const uint Darkside            = 751;    // 暗黑
+    public const uint DarkMissionary      = 747;    // 暗黑布道
+    public const uint ShadowWall          = 747;    // 暗影墙
+    public const uint LivingDead          = 810;    // 行尸走肉
+    public const uint Oblation            = 2578;   // 献祭
 
     #endregion
 

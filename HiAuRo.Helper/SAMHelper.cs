@@ -6,13 +6,13 @@ namespace HiAuRo.Helper;
 public class SAMHelper
 {
 
-    private const uint MeikyoShisui = 1233;      // 明镜止水
-    private const uint Higanbana = 1228;         // 彼岸花 (DoT)
-    private const uint Jinpu = 1298;             // 阵风 (buff)
-    private const uint Shifu = 1299;             // 士风 (buff)
-    private const uint Ikishoten = 1884;         // 意气冲天
-    private const uint OgiNamikiriReady = 2951;  // 奥义斩浪预备
-    private const uint TsubameGaeshiReady = 1239; // 燕飞 (回返彼岸花预备)
+    public const uint MeikyoShisui = 1233;      // 明镜止水
+    public const uint Higanbana = 1228;         // 彼岸花 (DoT)
+    public const uint Jinpu = 1298;             // 阵风 (buff)
+    public const uint Shifu = 1299;             // 士风 (buff)
+    public const uint Ikishoten = 1884;         // 意气冲天
+    public const uint OgiNamikiriReady = 2951;  // 奥义斩浪预备
+    public const uint TsubameGaeshiReady = 1239; // 燕飞 (回返彼岸花预备)
 
     /// <summary>武士职业量谱</summary>
     public static SAMGauge? Gauge => HelperRuntime.GetGauge<SAMGauge>();

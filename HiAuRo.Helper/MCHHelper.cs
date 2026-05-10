@@ -9,11 +9,11 @@ public class MCHHelper
 
     #region 技能 / Buff ID
 
-    private const uint Reassembled = 851;        // 整备
-    private const uint Wildfire = 861;           // 野火
-    private const uint Hypercharge = 1728;       // 过热
-    private const uint BarrelStabilizer = 851;   // 枪管加热 (already has reassemble)
-    private const uint QueenReady = 1726;        // 后式自走人偶 (buff on target)
+    public const uint Reassembled = 851;        // 整备
+    public const uint Wildfire = 861;           // 野火
+    public const uint Hypercharge = 1728;       // 过热
+    public const uint BarrelStabilizer = 851;   // 枪管加热 (already has reassemble)
+    public const uint QueenReady = 1726;        // 后式自走人偶 (buff on target)
 
     #endregion
 

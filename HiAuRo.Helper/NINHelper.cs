@@ -6,9 +6,9 @@ namespace HiAuRo.Helper;
 public class NINHelper
 {
 
-    private const uint Kassatsu = 497;           // 生杀予夺
-    private const uint TenChiJin = 1186;         // 天地人
-    private const uint Bunshin = 1954;           // 分身之术
+    public const uint Kassatsu = 497;           // 生杀予夺
+    public const uint TenChiJin = 1186;         // 天地人
+    public const uint Bunshin = 1954;           // 分身之术
 
     /// <summary>忍者职业量谱</summary>
     public static NINGauge? Gauge => HelperRuntime.GetGauge<NINGauge>();

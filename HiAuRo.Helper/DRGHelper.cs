@@ -6,12 +6,12 @@ namespace HiAuRo.Helper;
 public class DRGHelper
 {
 
-    private const uint LifeSurge = 116;          // 龙剑
-    private const uint LanceCharge = 1864;       // 猛枪
-    private const uint DragonSight = 1870;       // 巨龙视线
-    private const uint BattleLitany = 786;       // 战斗连祷
-    private const uint PowerSurge = 2720;        // 龙威 (buff)
-    private const uint GeirskogulReady = 2719;   // 龙眼 (武神枪预备)
+    public const uint LifeSurge = 116;          // 龙剑
+    public const uint LanceCharge = 1864;       // 猛枪
+    public const uint DragonSight = 1870;       // 巨龙视线
+    public const uint BattleLitany = 786;       // 战斗连祷
+    public const uint PowerSurge = 2720;        // 龙威 (buff)
+    public const uint GeirskogulReady = 2719;   // 龙眼 (武神枪预备)
 
     /// <summary>龙骑士职业量谱</summary>
     public static DRGGauge? Gauge => HelperRuntime.GetGauge<DRGGauge>();

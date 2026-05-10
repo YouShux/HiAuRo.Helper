@@ -9,17 +9,17 @@ public class ASTHelper
 
     #region 技能 / Buff / DoT ID
 
-    private const uint Divination = 1654;         // 占卜
-    private const uint Lightspeed = 841;          // 光速
-    private const uint Combust = 838;             // 焚灼 (DoT)
-    private const uint NeutralSect = 1892;        // 中间学派
-    private const uint Horoscope = 1891;          // 天星冲日
-    private const uint Exaltation = 2713;         // 擢升
-    private const uint Macrocosmos = 2712;        // 大宇宙
-    private const uint SunSign = 2720;            // 太阳神之衡 (buff on party)
-    private const uint Arrow = 2717;              // 放浪神之箭 (buff on party)
-    private const uint Spear = 2718;              // 战争神之枪 (buff on party)
-    private const uint Balance = 2716;            // 建筑神之塔 (buff on party)
+    public const uint Divination = 1654;         // 占卜
+    public const uint Lightspeed = 841;          // 光速
+    public const uint Combust = 838;             // 焚灼 (DoT)
+    public const uint NeutralSect = 1892;        // 中间学派
+    public const uint Horoscope = 1891;          // 天星冲日
+    public const uint Exaltation = 2713;         // 擢升
+    public const uint Macrocosmos = 2712;        // 大宇宙
+    public const uint SunSign = 2720;            // 太阳神之衡 (buff on party)
+    public const uint Arrow = 2717;              // 放浪神之箭 (buff on party)
+    public const uint Spear = 2718;              // 战争神之枪 (buff on party)
+    public const uint Balance = 2716;            // 建筑神之塔 (buff on party)
 
     #endregion
 

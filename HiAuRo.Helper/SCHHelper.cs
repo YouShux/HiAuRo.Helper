@@ -9,13 +9,13 @@ public class SCHHelper
 
     #region 技能 / Buff / DoT ID
 
-    private const uint ChainStratagem = 1221;     // 连环计
-    private const uint Biolysis = 1895;           // 蛊毒法 (DoT)
-    private const uint SacredSoil = 188;          // 野战治疗阵 (buff)
-    private const uint Excogitation = 1220;       // 深谋远虑之策
-    private const uint Recitation = 1896;         // 转化
-    private const uint Expedient = 2713;          // 疾风怒涛之计
-    private const uint Seraphism = 3714;          // 炽天炽翼
+    public const uint ChainStratagem = 1221;     // 连环计
+    public const uint Biolysis = 1895;           // 蛊毒法 (DoT)
+    public const uint SacredSoil = 188;          // 野战治疗阵 (buff)
+    public const uint Excogitation = 1220;       // 深谋远虑之策
+    public const uint Recitation = 1896;         // 转化
+    public const uint Expedient = 2713;          // 疾风怒涛之计
+    public const uint Seraphism = 3714;          // 炽天炽翼
 
     #endregion
 

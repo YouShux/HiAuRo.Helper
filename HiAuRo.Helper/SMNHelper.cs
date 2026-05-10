@@ -9,12 +9,12 @@ public class SMNHelper
 
     #region 技能 / Buff ID
 
-    private const uint SearingLight = 2703;       // 灼热之光
-    private const uint Aethercharge = 2582;       // 以太蓄能 (buff)
-    private const uint DreadwyrmTrance = 2584;    // 龙神附体 (buff)
-    private const uint SummonBahamut = 2585;      // 不死鸟附体 (buff after Bahamut)
-    private const uint RadiantAegis = 2700;       // 守护之光 (shield)
-    private const uint EverlastingFlight = 2586;  // 不死鸟之翼
+    public const uint SearingLight = 2703;       // 灼热之光
+    public const uint Aethercharge = 2582;       // 以太蓄能 (buff)
+    public const uint DreadwyrmTrance = 2584;    // 龙神附体 (buff)
+    public const uint SummonBahamut = 2585;      // 不死鸟附体 (buff after Bahamut)
+    public const uint RadiantAegis = 2700;       // 守护之光 (shield)
+    public const uint EverlastingFlight = 2586;  // 不死鸟之翼
 
     #endregion
 

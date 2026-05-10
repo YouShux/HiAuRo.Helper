@@ -6,9 +6,9 @@ namespace HiAuRo.Helper;
 public class RPRHelper
 {
 
-    private const uint ArcaneCircle = 2577;      // 神秘环
-    private const uint SoulSow = 2591;           // 播魂种 (buff)
-    private const uint Enshrouded = 2593;        // 夜游魂 (附体buff)
+    public const uint ArcaneCircle = 2577;      // 神秘环
+    public const uint SoulSow = 2591;           // 播魂种 (buff)
+    public const uint Enshrouded = 2593;        // 夜游魂 (附体buff)
 
     /// <summary>钐镰客职业量谱</summary>
     public static RPRGauge? Gauge => HelperRuntime.GetGauge<RPRGauge>();

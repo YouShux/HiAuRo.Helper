@@ -9,14 +9,14 @@ public class DNCHelper
 
     #region 技能 / Buff ID
 
-    private const uint TechnicalStep = 16003;      // 技巧舞步结束
-    private const uint StandardStep = 16002;       // 标准舞步结束
-    private const uint Devilment = 16011;          // 进攻之探戈
-    private const uint FlourishingFinish = 2698;   // 百花争艳 (buff)
-    private const uint FlourishingStarfall = 2700; // 流星舞预备
-    private const uint SilkenSymmetry = 2693;      // 对称投掷 (buff)
-    private const uint SilkenFlow = 2694;          // 非对称投掷 (buff)
-    private const uint Esprit = 1847;              // 伶俐 (gauge buff)
+    public const uint TechnicalStep = 16003;      // 技巧舞步结束
+    public const uint StandardStep = 16002;       // 标准舞步结束
+    public const uint Devilment = 16011;          // 进攻之探戈
+    public const uint FlourishingFinish = 2698;   // 百花争艳 (buff)
+    public const uint FlourishingStarfall = 2700; // 流星舞预备
+    public const uint SilkenSymmetry = 2693;      // 对称投掷 (buff)
+    public const uint SilkenFlow = 2694;          // 非对称投掷 (buff)
+    public const uint Esprit = 1847;              // 伶俐 (gauge buff)
 
     #endregion
 

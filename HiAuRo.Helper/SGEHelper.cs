@@ -9,14 +9,14 @@ public class SGEHelper
 
     #region 技能 / Buff / DoT ID
 
-    private const uint Eukrasia = 2429;           // 均衡
-    private const uint Kardia = 2428;             // 心关 (buff on target)
-    private const uint Physis = 2427;             // 自生 (buff)
-    private const uint Krasis = 2430;             // 活化 (buff on target)
-    private const uint Haima = 2432;              // 泛输血
-    private const uint Panhaima = 2433;           // 整体论
-    private const uint Pneuma = 2434;             // 魂灵风息
-    private const uint EukrasianDosis = 2614;     // 均衡注药 (DoT)
+    public const uint Eukrasia = 2429;           // 均衡
+    public const uint Kardia = 2428;             // 心关 (buff on target)
+    public const uint Physis = 2427;             // 自生 (buff)
+    public const uint Krasis = 2430;             // 活化 (buff on target)
+    public const uint Haima = 2432;              // 泛输血
+    public const uint Panhaima = 2433;           // 整体论
+    public const uint Pneuma = 2434;             // 魂灵风息
+    public const uint EukrasianDosis = 2614;     // 均衡注药 (DoT)
 
     #endregion
 

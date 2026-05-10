@@ -9,13 +9,13 @@ public class PLDHelper
 
     #region 技能 / Buff ID
 
-    private const uint Requiescat          = 1368;   // 安魂祈祷
-    private const uint FightOrFlight       = 76;     // 战逃反应
-    private const uint DivineMight         = 2673;   // 圣光之力 (赎罪剑预备)
-    private const uint HolySheltron        = 2674;   // 圣盾阵
-    private const uint Sentinel            = 74;     // 预警
-    private const uint HallowedGround      = 82;     // 神圣领域
-    private const uint Cover               = 80;     // 保护
+    public const uint Requiescat          = 1368;   // 安魂祈祷
+    public const uint FightOrFlight       = 76;     // 战逃反应
+    public const uint DivineMight         = 2673;   // 圣光之力 (赎罪剑预备)
+    public const uint HolySheltron        = 2674;   // 圣盾阵
+    public const uint Sentinel            = 74;     // 预警
+    public const uint HallowedGround      = 82;     // 神圣领域
+    public const uint Cover               = 80;     // 保护
 
     #endregion
 

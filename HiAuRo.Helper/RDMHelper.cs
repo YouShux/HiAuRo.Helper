@@ -9,12 +9,12 @@ public class RDMHelper
 
     #region 技能 / Buff ID
 
-    private const uint Embolden = 2282;        // 鼓励
-    private const uint Manafication = 1971;    // 倍增
-    private const uint Acceleration = 1238;    // 促进
-    private const uint VerstoneReady = 1235;   // 赤飞石预备
-    private const uint VerfireReady = 1234;    // 赤火炎预备
-    private const uint MagickBarrier = 2574;   // 抗死
+    public const uint Embolden = 2282;        // 鼓励
+    public const uint Manafication = 1971;    // 倍增
+    public const uint Acceleration = 1238;    // 促进
+    public const uint VerstoneReady = 1235;   // 赤飞石预备
+    public const uint VerfireReady = 1234;    // 赤火炎预备
+    public const uint MagickBarrier = 2574;   // 抗死
 
     #endregion
 

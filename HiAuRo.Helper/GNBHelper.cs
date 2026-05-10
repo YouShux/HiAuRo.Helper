@@ -9,25 +9,25 @@ public class GNBHelper
 
     #region 技能 / Buff ID
 
-    private const uint 无情           = 1831;   // 无情
-    private const uint 撕喉预备          = 1842;   // 续剑1
-    private const uint 裂膛预备         = 1843;   //续剑2
-    private const uint 穿目预备        = 1844;   // 续剑3
-    private const uint 刚玉之清     = 2684;   // 4s的15减伤
-    private const uint 超火流星         = 1836;   // 无敌
-    private const uint 残暴弹         = 1898;   // 残暴弹 (护盾buff)
-    private const uint 命运之印预备 = 3839;//Ready to Raze 命运之环续剑
-    private const uint 心有灵狮 = 3840; //Ready to Reign
-    private const uint 超高速预备 = 2686;//续剑爆发击
-    private const uint 王室亲卫 = 1833;//Royal Guard
-    private const uint 音速破预备 = 3886U;
-    private const uint 刚玉之心 = 2683; //8s的15减伤
-    private const uint 刚玉之净 = 2685; //回血
-    private const uint 石之心 = 1840;
-    private const uint 星云 = 1834;
-    private const uint 大星云 = 3838;//Great Nebula
-    private const uint 伪装 = 1832;
-    private const uint 极光 = 1835;
+    public const uint 无情           = 1831;   // 无情
+    public const uint 撕喉预备          = 1842;   // 续剑1
+    public const uint 裂膛预备         = 1843;   //续剑2
+    public const uint 穿目预备        = 1844;   // 续剑3
+    public const uint 刚玉之清     = 2684;   // 4s的15减伤
+    public const uint 超火流星         = 1836;   // 无敌
+    public const uint 残暴弹         = 1898;   // 残暴弹 (护盾buff)
+    public const uint 命运之印预备 = 3839;//Ready to Raze 命运之环续剑
+    public const uint 心有灵狮 = 3840; //Ready to Reign
+    public const uint 超高速预备 = 2686;//续剑爆发击
+    public const uint 王室亲卫 = 1833;//Royal Guard
+    public const uint 音速破预备 = 3886U;
+    public const uint 刚玉之心 = 2683; //8s的15减伤
+    public const uint 刚玉之净 = 2685; //回血
+    public const uint 石之心 = 1840;
+    public const uint 星云 = 1834;
+    public const uint 大星云 = 3838;//Great Nebula
+    public const uint 伪装 = 1832;
+    public const uint 极光 = 1835;
     #endregion
 
     /// <summary>绝枪战士职业量谱</summary>

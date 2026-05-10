@@ -91,19 +91,19 @@ public class WARHelper
 
     #region 内部 Buff ID
 
-    private const uint _原初的解放 = 1177;
-    private const uint _狂暴 = 86;
-    private const uint _原初的混沌 = 1856;
-    private const uint _红斩 = 2677;
-    private const uint _战栗 = 87;
-    private const uint _复仇 = 89;
-    private const uint _死斗 = 88;
-    private const uint _蛮荒崩裂预备 = 2624;
-    private const uint _尽毁预备 = 3834;
-    private const uint _原初的怒震预备 = 3901;
-    private const uint _原初的血气 = 2678;
-    private const uint _守护 = 91;
-    private const uint _原初的觉悟 = 2663;
+    public const uint _原初的解放 = 1177;
+    public const uint _狂暴 = 86;
+    public const uint _原初的混沌 = 1856;
+    public const uint _红斩 = 2677;
+    public const uint _战栗 = 87;
+    public const uint _复仇 = 89;
+    public const uint _死斗 = 88;
+    public const uint _蛮荒崩裂预备 = 2624;
+    public const uint _尽毁预备 = 3834;
+    public const uint _原初的怒震预备 = 3901;
+    public const uint _原初的血气 = 2678;
+    public const uint _守护 = 91;
+    public const uint _原初的觉悟 = 2663;
 
     #endregion
 

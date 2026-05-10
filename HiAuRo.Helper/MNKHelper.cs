@@ -6,12 +6,12 @@ namespace HiAuRo.Helper;
 public class MNKHelper
 {
 
-    private const uint PerfectBalance = 110;     // 震脚
-    private const uint RiddleOfFire = 1181;      // 红莲体势
-    private const uint RiddleOfWind = 2587;      // 疾风体势
-    private const uint Brotherhood = 1185;       // 义结金兰
-    private const uint LeadenFist = 1861;        // 金刚体势 (buff)
-    private const uint DisciplinedFist = 3001;   // 破坏神脚 (增伤buff)
+    public const uint PerfectBalance = 110;     // 震脚
+    public const uint RiddleOfFire = 1181;      // 红莲体势
+    public const uint RiddleOfWind = 2587;      // 疾风体势
+    public const uint Brotherhood = 1185;       // 义结金兰
+    public const uint LeadenFist = 1861;        // 金刚体势 (buff)
+    public const uint DisciplinedFist = 3001;   // 破坏神脚 (增伤buff)
 
     /// <summary>武僧职业量谱</summary>
     public static MNKGauge? Gauge => HelperRuntime.GetGauge<MNKGauge>();

@@ -9,14 +9,14 @@ public class BRDHelper
 
     #region 技能 / Buff / DoT ID
 
-    private const uint StraightShotReady = 122;
-    private const uint StormbiteDot       = 1201;
-    private const uint CausticBiteDot     = 1200;
-    private const uint RagingStrikes      = 125;
-    private const uint BattleVoice        = 141;
-    private const uint RadiantFinale      = 2722;
-    private const uint Barrage            = 128;
-    private const uint HawkEye            = 3122;
+    public const uint StraightShotReady = 122;
+    public const uint StormbiteDot       = 1201;
+    public const uint CausticBiteDot     = 1200;
+    public const uint RagingStrikes      = 125;
+    public const uint BattleVoice        = 141;
+    public const uint RadiantFinale      = 2722;
+    public const uint Barrage            = 128;
+    public const uint HawkEye            = 3122;
 
     #endregion
 
