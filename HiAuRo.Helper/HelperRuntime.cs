@@ -57,6 +57,9 @@ public static class HelperRuntime
     public static bool IsCurrentTargetInvincible() =>
         _ctx?.IsCurrentTargetInvincible() ?? false;
 
+    public static int GetEnemyCountNearTarget(float range) =>
+        _ctx?.GetEnemyCountNearTarget(range) ?? 0;
+
     public static uint GetActionChange(uint spellId) =>
         _ctx?.GetActionChange(spellId) ?? spellId;
 
