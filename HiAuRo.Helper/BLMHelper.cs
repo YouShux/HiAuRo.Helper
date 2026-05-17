@@ -96,12 +96,12 @@ public class BLMHelper
 
     public static bool 三目标aoe()
     {
-        return HelperRuntime.GetNearbyEnemyCount(25) >= 3;
+        return HelperRuntime.GetEnemyCountNearTarget(5) >= 3;
     }
 
     public static bool 双目标aoe()
     {
-        var count = HelperRuntime.GetNearbyEnemyCount(25);
+        var count = HelperRuntime.GetEnemyCountNearTarget(5);
         return count >= 2 && count < 3;
     }
 
@@ -115,7 +115,7 @@ public class BLMHelper
     }
 
     #endregion
-
+    
     /// <summary>黑魔法师职业量谱</summary>
     public static BLMGauge Gauge => HelperRuntime.GetGauge<BLMGauge>();
 

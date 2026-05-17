@@ -63,17 +63,46 @@ public class GNBHelper
         HelperRuntime.HasStatus(裂膛预备);
 
     /// <summary>穿目预备是否激活</summary>
-    public static bool Has超高速预备 =>
-        HelperRuntime.HasStatus(超高速预备);
-    
-    public static bool Has音速破预备 =>
-        HelperRuntime.HasStatus(音速破预备);
-    public static bool Has命运之印预备 =>
-        HelperRuntime.HasStatus(命运之印预备);
-    public static bool Has超火流星 =>
-        HelperRuntime.HasStatus(超火流星);
-    public static bool Has心有灵狮 =>
-        HelperRuntime.HasStatus(心有灵狮);
     public static bool Has穿目预备 =>
         HelperRuntime.HasStatus(穿目预备);
+
+    #region 技能
+    public const uint 利刃斩 = 16137;
+    public const uint 残暴弹技能 = 16139;
+    public const uint 讯连斩 = 16145;
+    public const uint 爆发击 = 16162;
+    public const uint 恶魔切 = 16141;
+    public const uint 恶魔杀 = 16149;
+    public const uint 命运之环 = 16163;
+    public const uint 命运之印 = 36936;
+    public const uint 闪雷弹 = 16143;
+    public const uint 音速破 = 16153;
+    public const uint 烈牙 = 16146;
+    public const uint 猛兽爪 = 16147;
+    public const uint 凶禽爪 = 16150;
+    public const uint 倍功 = 25760;
+    public const uint 崛起之心 = 36937;
+    public const uint 支配之心 = 36938;
+    public const uint 终结之心 = 36939;
+    public const uint 无情技能 = 16138;
+    public const uint 危险领域 = 16144;
+    public const uint 弓形冲波 = 16159;
+    public const uint 血壤 = 16164;
+    public const uint 爆破领域 = 16165;
+    public const uint 铁壁 = 7531;
+    public const uint 雪仇 = 7535;
+    public const uint 挑衅 = 7533;
+    public const uint 退避 = 7537;
+    public const uint 亲疏自行 = 7548;
+    public const uint 撕喉 = 16148;
+    public const uint 裂膛 = 16151;
+    public const uint 穿目 = 16152;
+    public const uint 超高速 = 25761;
+    #endregion
+
+    #region 辅助方法
+        public static bool 续剑激活 => HelperRuntime.HasStatus(1842) || HelperRuntime.HasStatus(1843) || HelperRuntime.HasStatus(1844) || HelperRuntime.HasStatus(3839) || HelperRuntime.HasStatus(2686);
+        public static bool 血壤激活 => HelperRuntime.HasStatus(5051);
+        public static bool 群怪模式 => HelperRuntime.GetNearbyEnemyCount(5) >= 3;
+    #endregion
 }
