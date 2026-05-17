@@ -65,6 +65,21 @@ public class BLMHelper
     public const uint 魔纹加速buff = 738;
 
     #endregion
+
+    #region BUFF检测
+
+    public static bool Has醒梦 => HelperRuntime.HasStatus(醒梦buff);
+    public static bool Has即刻 => HelperRuntime.HasStatus(即刻buff);
+    public static bool Has沉稳 => HelperRuntime.HasStatus(沉稳buff);
+    public static bool Has魔罩 => HelperRuntime.HasStatus(魔罩buff);
+    public static bool Has三连 => HelperRuntime.HasStatus(三连buff);
+    public static bool Has雷云 => HelperRuntime.HasStatus(雷云buff);
+    public static bool Has火苗 => HelperRuntime.HasStatus(火苗buff);
+    public static bool Has魔纹存在 => HelperRuntime.HasStatus(魔纹存在buff);
+    public static bool Has魔纹加速 => HelperRuntime.HasStatus(魔纹加速buff);
+
+    #endregion
+
     /// <summary>黑魔法师职业量谱</summary>
     public static BLMGauge Gauge => HelperRuntime.GetGauge<BLMGauge>();
 
