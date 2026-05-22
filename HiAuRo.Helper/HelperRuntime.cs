@@ -15,6 +15,9 @@ public static class HelperRuntime
     public static bool HasStatusOnTarget(uint statusId) =>
         _ctx?.HasStatusOnTarget(statusId) ?? false;
 
+    public static float GetStatusTimeLeftOnTarget(uint statusId) =>
+        _ctx?.GetStatusTimeLeftOnTarget(statusId) ?? 0f;
+
     public static T? GetGauge<T>() where T : class =>
         _ctx?.GetGauge<T>();
 

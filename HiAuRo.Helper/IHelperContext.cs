@@ -20,6 +20,9 @@ internal interface IHelperContext
     /// <summary>自身 buff 剩余时间（秒）</summary>
     float GetAuraTimeLeft(uint buffId) => 0f;
 
+    /// <summary>目标身上 status 剩余时间（秒）</summary>
+    float GetStatusTimeLeftOnTarget(uint statusId) => 0f;
+
     /// <summary>自身 buff 层数</summary>
     int GetAuraStackCount(uint buffId) => 0;
 

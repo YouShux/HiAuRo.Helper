@@ -88,9 +88,15 @@ public class BLMHelper
     {
         var level = HelperRuntime.GetCurrentLevel();
         if (level >= 92)
-            return !HelperRuntime.HasStatusOnTarget(3871) && !HelperRuntime.HasStatusOnTarget(3872);
+        {
+            var time = Math.Max(HelperRuntime.GetStatusTimeLeftOnTarget(3871), HelperRuntime.GetStatusTimeLeftOnTarget(3872));
+            return time < 3f;
+        }
         if (level >= 45)
-            return !HelperRuntime.HasStatusOnTarget(163) && !HelperRuntime.HasStatusOnTarget(1210);
+        {
+            var time = Math.Max(HelperRuntime.GetStatusTimeLeftOnTarget(163), HelperRuntime.GetStatusTimeLeftOnTarget(1210));
+            return time < 3f;
+        }
         return false;
     }
 

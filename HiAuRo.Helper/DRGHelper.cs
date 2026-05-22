@@ -90,7 +90,7 @@ public class DRGHelper
 
     public static bool 群怪模式 => HelperRuntime.GetNearbyEnemyCount(5) >= 3;
 
-    public static bool 需要补DOT => !HelperRuntime.HasStatusOnTarget(2718);
+    public static bool 需要补DOT => HelperRuntime.GetStatusTimeLeftOnTarget(2718) < 3f;
 
     #endregion
 }
