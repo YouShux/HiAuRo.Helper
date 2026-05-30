@@ -191,7 +191,7 @@ public class PLDHelper
         // ── 赎罪剑系列 ──
         public const uint
             赎罪剑 = 16460,
-            祈祷剑 = 36918,
+            祈告剑 = 36918,
             葬送剑 = 36919,
             偿赎剑 = 25747;
 
@@ -250,7 +250,7 @@ public class PLDHelper
             安魂祈祷 = 1368,
             神圣魔法效果提高 = 2673,
             赎罪剑预备 = 1902,
-            祈祷剑预备 = 3827,
+            祈告剑预备 = 3827,
             葬送剑预备 = 3828,
             沥血剑预备 = 3847,
             荣耀之剑预备 = 3831,
@@ -275,7 +275,7 @@ public class PLDHelper
     public const uint _安魂祈祷 = 1368;
     public const uint _神圣魔法效果提高 = 2673;
     public const uint _赎罪剑预备 = 1902;
-    public const uint _祈祷剑预备 = 3827;
+    public const uint _祈告剑预备 = 3827;
     public const uint _葬送剑预备 = 3828;
     public const uint _沥血剑预备 = 3847;
     public const uint _荣耀之剑预备 = 3831;
@@ -304,7 +304,7 @@ public class PLDHelper
     public static bool Has安魂祈祷 => HelperRuntime.HasStatus(_安魂祈祷);
     public static bool Has神圣魔法效果提高 => HelperRuntime.HasStatus(_神圣魔法效果提高);
     public static bool Has赎罪剑预备 => HelperRuntime.HasStatus(_赎罪剑预备);
-    public static bool Has祈祷剑预备 => HelperRuntime.HasStatus(_祈祷剑预备);
+    public static bool Has祈告剑预备 => HelperRuntime.HasStatus(_祈告剑预备);
     public static bool Has葬送剑预备 => HelperRuntime.HasStatus(_葬送剑预备);
     public static bool Has沥血剑预备 => HelperRuntime.HasStatus(_沥血剑预备);
     public static bool Has荣耀之剑预备 => HelperRuntime.HasStatus(_荣耀之剑预备);
@@ -317,7 +317,7 @@ public class PLDHelper
 
     /// <summary>是否有任意赎罪剑预备 (赎罪/祈祷/葬送)</summary>
     public static bool Has任意赎罪剑预备 =>
-        Has赎罪剑预备 || Has祈祷剑预备 || Has葬送剑预备;
+        Has赎罪剑预备 || Has祈告剑预备 || Has葬送剑预备;
 
     #endregion
 
